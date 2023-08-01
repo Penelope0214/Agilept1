@@ -1,1 +1,31 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # Change 'main' to your main branch name if it's different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Set the Node.js version compatible with your Next.js project
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v21
+        with:
+          token: ${{ secrets.VERCEL_TOKEN }}
 
