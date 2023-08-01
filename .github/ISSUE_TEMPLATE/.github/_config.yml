@@ -1,1 +1,37 @@
+# Site settings
+title: My Jekyll Site
+description: A simple Jekyll site
+url: https://example.com  # Replace with your site's URL
+
+# Build settings
+theme: jekyll-theme-primer  # Replace with the theme you want to use
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+plugins:
+  - jekyll-feed
+
+# Pagination settings
+paginate: 10  # Number of posts per page
+
+# Permalinks
+permalink: pretty
+
+# Navigation links
+header_links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Contact
+    url: /contact
+
+# Custom variables
+my_variable: "Hello, Jekyll!"
+
+# GitHub Pages settings
+remote_theme: owner/repo  # Uncomment and replace with a specific GitHub Pages theme if needed
 
