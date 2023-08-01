@@ -1,1 +1,13 @@
 
+body {
+    background-color: #f0f0f0; /* Set the background color of the page */
+    font-family: Arial, sans-serif; /* Use Arial font for the text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+h1 {
+    color: navy; /* Set the text color to navy blue */
+    text-align: center; /* Center-align the heading */
+    margin-top: 100px; /* Add some top margin to the heading */
+}
