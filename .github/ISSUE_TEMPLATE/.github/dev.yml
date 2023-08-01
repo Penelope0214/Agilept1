@@ -1,31 +1,25 @@
-name: Deploy to Vercel
+# dev.yml
 
-on:
-  push:
-    branches:
-      - main  # Change 'main' to your main branch name if it's different
+# Development Environment Settings
+environment: development
+debug: true
+logging_level: debug
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# Database Configuration
+database:
+  host: localhost
+  port: 5432
+  username: dev_user
+  password: dev_password
+  database_name: dev_database
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+# API Configuration
+api:
+  base_url: http://localhost:3000/api
+  timeout: 5000
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'  # Set the Node.js version compatible with your Next.js project
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Next.js app
-        run: npm run build
-
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v21
-        with:
-          token: ${{ secrets.VERCEL_TOKEN }}
+# Feature Flags
+features:
+  enable_feature_1: true
+  enable_feature_2: false
 
