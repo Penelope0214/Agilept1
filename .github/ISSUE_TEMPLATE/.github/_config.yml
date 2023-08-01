@@ -11,6 +11,10 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor/bundle
+  # Build Settings
+sass:
+  sass_dir: assets/css
+
 plugins:
   - jekyll-feed
 
